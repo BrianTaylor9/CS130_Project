@@ -1,0 +1,1023 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap");
+
+:root {
+  --header: "Fredoka One", cursive;
+  --text: "DM Sans", sans-serif;
+  --card: "Fredoka", sans-serif;
+  --theme: rgb(230, 98, 59);
+  --default: rgb(170, 64, 240);
+  --environment: rgb(4, 199, 118);
+  --gender: rgb(199, 4, 140);
+  --medical: rgb(0, 217, 255);
+  --education: rgb(255, 162, 49);
+  --headerColor: rgb(70, 59, 59);
+  --backTheme: rgba(216, 214, 209, 0.425);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.items .header {
+  width: 100%;
+  position: relative;
+  font-size: 50px;
+  text-align: center;
+  font-family: var(--header);
+  /* border: 1px solid red; */
+  color: var(--headerColor);
+  letter-spacing: 2.5px;
+  margin: 70px auto;
+}
+
+/* ABOUT */
+.about {
+  display: block;
+  position: relative;
+  width: calc(80% - 0px);
+  /* border: 1px solid red; */
+  margin: 150px auto;
+  margin-bottom: 50px;
+}
+
+.about .aboutGrid,
+.campaign .campaignGrid {
+  display: flow-root;
+  position: relative;
+  width: 100%;
+}
+.about .aboutGrid .aboutCard {
+  display: block;
+  float: left;
+  position: relative;
+  width: calc(25% - 30px);
+  margin: 14px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 196, 196, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(199, 197, 197, 0.26);
+  padding-bottom: 30px;
+}
+
+.about .aboutGrid .aboutCard:hover {
+  border: 1px solid rgba(179, 175, 175, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(199, 197, 197, 0.781);
+}
+
+.about .aboutGrid .aboutCard img {
+  display: block;
+  width: calc(40% - 0px);
+  height: auto;
+  margin: 10px auto;
+  margin-top: 60px;
+}
+
+.about .aboutGrid .aboutCard h2 {
+  display: block;
+  width: calc(100% - 20px);
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-family: var(--card);
+  padding-left: 20px;
+  margin-bottom: 0px !important;
+  color: rgb(56, 46, 46);
+}
+.about .aboutGrid .aboutCard p {
+  display: block;
+  width: calc(100% - 40px);
+  font-size: 18px;
+  /* letter-spacing: 2px; */
+  /* font-family: var(--card); */
+  padding: 5px 20px;
+  color: rgb(56, 46, 46);
+}
+
+/* campaign/FEATURED */
+
+.campaign {
+  width: 100%;
+  height: auto;
+  display: flow-root;
+  position: relative;
+  /* height: 300px; */
+  /* border: 1px solid rgba(241, 72, 5, 0.425); */
+  margin-top: 300px;
+  margin-bottom: 150px;
+}
+
+.campaign .upper {
+  position: absolute;
+  display: block;
+  background-color: rgba(216, 214, 209, 0.425);
+  width: 100%;
+  height: 60vh;
+}
+
+.campaign .header {
+  width: calc(100% - 250px);
+  padding-left: 250px;
+  text-align: left;
+  /* margin: 70px auto; */
+  margin-bottom: 70px;
+  margin-top: 10px;
+  color: rgb(56, 51, 51);
+}
+
+.campaign p {
+  width: calc(100% - 250px);
+  font-size: 20px;
+  font-family: var(--text);
+  color: rgb(168, 28, 28);
+  font-weight: 500;
+  padding-left: 250px;
+  text-align: left;
+  margin-bottom: 0 !important;
+  padding-top: 100px;
+  text-transform: uppercase;
+}
+
+.campaign a {
+  text-decoration: none;
+}
+
+.campaign .campaignGrid {
+  width: calc(70% - 0px);
+  margin: 50px auto;
+  position: relative;
+  margin: 10px auto;
+}
+
+.campaign .campaignGrid a .campaignCard {
+  display: block;
+  min-height: 500px;
+  margin: 14px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 196, 196, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(199, 197, 197, 0.26);
+}
+
+.arrows {
+  display: block;
+  /* border: 1px solid rebeccapurple; */
+  transform: translateY(280px);
+}
+
+.campaign .campaignGrid a .campaignCard:hover {
+  border: 1px solid rgba(156, 154, 154, 0.582);
+  box-shadow: 1px 1px 5px 2px rgba(182, 181, 181, 0.781);
+}
+.campaign .campaignGrid .campaignCard .img {
+  display: block;
+  position: relative;
+  width: calc(100% - 0px);
+  height: auto;
+}
+
+.campaign .campaignGrid .campaignCard .img span {
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: 500;
+  border-radius: 20px;
+  font-size: 12px;
+  background-color: rgb(163, 43, 243);
+}
+
+.campaign .campaignGrid .campaignCard .img .medical {
+  background-color: var(--medical);
+}
+.campaign .campaignGrid .campaignCard .img .education {
+  background-color: var(--education);
+}
+.campaign .campaignGrid .campaignCard .img .environment {
+  background-color: var(--environment);
+}
+.campaign .campaignGrid .campaignCard .img .gender {
+  background-color: var(--gender);
+}
+
+.campaign .campaignGrid .campaignCard .img img {
+  display: block;
+  width: calc(100% - 0px);
+  height: auto;
+  margin: 0px auto;
+  /* margin-top: 30px; */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  /* transform: translateZ(0px); */
+}
+
+.campaign .campaignGrid a .campaignCard:hover .img img {
+  /* transform: translateZ(20px); */
+  transform: scale(1.07);
+  transition: all 0.2s linear;
+}
+.campaign .campaignGrid a .campaignCard h2 {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-family: var(--header);
+  padding-left: 0px;
+  color: rgb(47, 56, 46);
+  font-weight: 400;
+  transition: all 0.2s linear;
+
+  /* border: 1px solid red; */
+}
+
+.campaign .campaignGrid a .campaignCard:hover h2 {
+  color: rgb(230, 98, 59);
+  transition: all 0.2s linear;
+
+  /* border: 1px solid red; */
+}
+.campaign .campaignGrid a .campaignCard p {
+  display: block;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+
+  font-size: 18px;
+  /* letter-spacing: 2px; */
+  /* font-family: var(--card); */
+  padding: 5px 20px;
+  color: rgb(131, 108, 108);
+  /* border: 1px solid red; */
+  text-transform: none;
+}
+.campaign .campaignGrid a .campaignCard .lowershade {
+  display: block;
+  position: relative;
+  width: calc(100% - 2px);
+  background-color: rgba(216, 214, 209, 0.425);
+  margin-top: 30px;
+  border: 1px solid rgba(216, 214, 209, 0.425);
+  padding: 15px 0;
+  /* padding-bottom: 60px; */
+}
+
+.campaign .campaignGrid a .campaignCard .lowershade .scroll {
+  display: block;
+  position: relative;
+  width: calc(100% - 2px);
+  /* background-color: rgba(216, 214, 209, 0.425); */
+  margin-top: 20px;
+  border: 1px solid rgba(218, 217, 214, 0);
+  /* padding: 15px 0; */
+  /* padding-bottom: 60px; */
+}
+
+.campaign .campaignGrid a .campaignCard .lowershade .scroll .bar {
+  position: relative;
+  width: calc(90% - 0px);
+  margin: 10px auto;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  /* border: 1px solid red; */
+}
+
+.campaign .campaignGrid a .campaignCard .lowershade .scroll p {
+  /* display: inline-block; */
+  position: relative;
+  width: fit-content;
+  /* border: 1px solid rgba(4, 241, 4, 0.425); */
+}
+.campaign .campaignGrid a .campaignCard .lowershade .scroll .end {
+  float: right;
+}
+.campaign .campaignGrid a .campaignCard .lowershade .scroll .start {
+  float: left;
+}
+.campaign .campaignGrid a .campaignCard .lowershade .donateBtn {
+  background-color: var(--theme);
+  width: calc(80% - 0px);
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 10px;
+  color: white;
+  font-family: var(--card);
+  text-align: center;
+  padding: 9px 0px;
+  padding-bottom: 5px;
+
+  font-size: 18px;
+}
+
+.campaign .campaignGrid a .campaignCard .lowershade .donateBtn .txt {
+  display: inline-block;
+  transform: translateY(-3px);
+}
+
+/* BeVolunteer */
+
+.volunteer {
+  display: block;
+  width: calc(100% - 0px);
+  position: relative;
+  margin: 150px 0;
+}
+
+.volunteer .elem {
+  float: left;
+  width: calc(50% - 0px);
+}
+
+.volunteer .v_left {
+  background-color: rgb(250, 223, 215);
+}
+.volunteer .v_right {
+  background-color: rgb(194, 228, 215);
+}
+
+.volunteer .elem h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: var(--header);
+  color: rgb(75, 65, 65);
+  letter-spacing: 2px;
+}
+
+.volunteer .elem p {
+  text-align: center;
+  font-size: 25px;
+  font-family: var(--card);
+  color: rgb(117, 102, 102);
+  letter-spacing: 1px;
+  padding: 0 20px;
+}
+
+.volunteer .elem a {
+  text-align: center;
+  display: block;
+  width: fit-content;
+  font-size: 25px;
+  font-family: var(--card);
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  margin: 0 auto;
+  /* margin-right: 50px; */
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.volunteer .v_right a {
+  background-color: rgb(250, 223, 215);
+}
+
+.volunteer .v_left a {
+  background-color: rgb(194, 228, 215);
+}
+
+/* ARTICLE */
+
+.article {
+  display: block;
+  position: relative;
+  width: calc(70% - 0px);
+  /* border: 1px solid red; */
+  margin: 150px auto;
+  margin-bottom: 50px;
+}
+
+.blog {
+  margin: 80px auto;
+}
+
+.article .articleGrid {
+  display: flow-root;
+  position: relative;
+  width: 100%;
+}
+.article .articleGrid .articleCard {
+  display: block;
+  float: left;
+  position: relative;
+  width: calc(30% - 40px);
+  margin: 14px 20px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 196, 196, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(199, 197, 197, 0.26);
+  padding-bottom: 0px;
+}
+
+.article .blogGrid .articleCard {
+  width: calc(33% - 30px);
+}
+
+.article .articleGrid .articleCard {
+  display: block;
+  min-height: 500px;
+  margin: 14px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 196, 196, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(199, 197, 197, 0.26);
+}
+
+.article .articleGrid .articleCard:hover,
+.article .articleGrid .articleCard2 .box:hover {
+  border: 1px solid rgba(159, 159, 159, 0.582);
+  box-shadow: 1px 1px 5px 2px rgba(201, 201, 201, 0.781);
+}
+.article .articleGrid .articleCard .img {
+  display: block;
+  position: relative;
+  width: calc(100% - 0px);
+  height: auto;
+}
+
+.article .articleGrid .articleCard .img span {
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  border-radius: 20px;
+  font-size: 12px;
+  background-color: var(--default);
+}
+
+.article .articleGrid .articleCard .img .medical {
+  background-color: var(--medical);
+}
+.article .articleGrid .articleCard .img .education {
+  background-color: var(--education);
+}
+.article .articleGrid .articleCard .img .environment {
+  background-color: var(--environment);
+}
+.article .articleGrid .articleCard .img .gender {
+  background-color: var(--gender);
+}
+
+.article .articleGrid .articleCard .details {
+  display: flow-root;
+  width: 100%;
+  margin-top: 20px;
+  display: flow-root;
+}
+.article .articleGrid .articleCard .details span {
+  /* padding: 10px 15px; */
+  float: right;
+  width: fit-content;
+  text-transform: uppercase;
+  color: rgb(230, 98, 59);
+  font-weight: 700;
+  font-size: 17px;
+  /* border: 1.5px solid rgba(207, 35, 35, 0.582); */
+  margin-right: 20px;
+}
+.article .articleGrid .articleCard .details p {
+  padding: 0px 15px;
+  transform: translateY(-10px);
+  width: fit-content;
+  float: left;
+  color: rgba(186, 186, 186, 0.993);
+  font-weight: 700;
+  font-size: 14px;
+  /* border: 1.5px solid rgba(207, 35, 35, 0.582); */
+  margin-left: 0px;
+}
+.article .articleGrid .articleCard .img img {
+  display: block;
+  width: calc(100% - 0px);
+  height: auto;
+  margin: 0px auto;
+  /* margin-top: 30px; */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  /* transform: translateZ(0px); */
+}
+
+.article .articleGrid .articleCard:hover .img img {
+  /* transform: translateZ(20px); */
+  transform: scale(1.07);
+  transition: all 0.2s linear;
+}
+.article .articleGrid .articleCard h2 {
+  display: block;
+  width: calc(92% - 40px);
+  margin: 10px auto;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: var(--header);
+  padding-left: 0px;
+  color: rgb(47, 56, 46);
+  font-weight: 400;
+  transition: all 0.2s linear;
+  text-align: left;
+
+  /* border: 1px solid red; */
+}
+
+.article .articleGrid .articleCard:hover h2 {
+  color: var(--theme);
+  transition: all 0.2s linear;
+
+  /* border: 1px solid red; */
+}
+.article .articleGrid .articleCard .contents {
+  display: block;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px 20px;
+  color: rgb(131, 108, 108);
+  /* border: 1px solid red; */
+  text-transform: none;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgba(214, 213, 213, 0.329);
+}
+
+/* BTNS */
+
+.article .articleGrid .articleCard .action_btns {
+  display: flow-root;
+  width: calc(100% - 20px);
+  margin: 10px auto;
+  margin-top: 30px;
+  /* border: 1px solid rgba(136, 18, 18, 0.767); */
+}
+
+.article .articleGrid .articleCard .action_btns .upvote {
+  /* background-color: rgba(72, 210, 235, 0.274); */
+  float: left;
+  color: black;
+  margin-right: auto;
+  transition: all 0.1s linear;
+  font-size: 15px;
+  font-weight: 600;
+}
+.article .articleGrid .articleCard .action_btns .upvote_btn {
+  color: rgb(255, 255, 255);
+  margin-right: auto;
+  transition: all 0.1s linear;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: var(--theme);
+  font-size: 20px;
+  margin-left: 7px;
+}
+
+.article .articleGrid .articleCard .action_btns .upvote:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  transition: all 0.1s linear;
+}
+
+.article .articleGrid .articleCard .action_btns .upvote_btn:hover {
+  background-color: rgba(155, 45, 11, 0.87);
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+
+.article .articleGrid .articleCard .action_btns .upvote span {
+  transform: translateY(-32px) !important;
+  display: block;
+  margin-left: 45px;
+  position: relative;
+  font-size: 23px;
+  color: rgb(129, 121, 106);
+  font-family: var(--default) !important;
+  font-weight: 300;
+  letter-spacing: 1px;
+  /* border: 1px solid red; */
+}
+
+.article .articleGrid .articleCard .action_btns .read {
+  float: right;
+  /* padding: 10px 20px; */
+  margin-right: 15px;
+  border-radius: 10px;
+  /* box-shadow: 1px 1px 5px 5px rgba(203, 203, 203, 0.308); */
+  text-decoration: none;
+  color: rgb(129, 121, 106);
+  font-weight: 300;
+  border: none;
+  font-family: var(--default);
+  background-color: transparent;
+  transition: all 0.1s linear;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 20px;
+
+  /* background-image: linear-gradient(
+    to bottom right,
+    rgb(233, 184, 217),
+    rgb(116, 14, 163)
+  ); */
+}
+
+.article .articleGrid .articleCard .action_btns .read:hover {
+  transition: all 0.1s linear;
+  color: rgb(230, 98, 59);
+  /* background-color: var(--theme); */
+}
+
+/* articleCard2 */
+
+.article .articleGrid .articleCard2 {
+  display: block;
+  float: left;
+  position: relative;
+  width: calc(40% - 30px);
+  margin: 14px 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  /* padding: 30px; */
+}
+
+.article .articleGrid .articleCard2 .box {
+  display: block;
+  position: relative;
+  width: calc(100% - 50px);
+  margin: 20px auto;
+  border: 1px solid gray;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 196, 196, 0.767);
+  box-shadow: 1px 1px 5px 2px rgba(226, 226, 226, 0.26);
+  background-color: rgba(242, 238, 235, 0.808);
+  padding: 30px 20px;
+  min-height: 200px;
+}
+.article .articleGrid .articleCard2 .box .date2 {
+  margin-top: 60px;
+  margin-left: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--theme);
+  color: white;
+  font-weight: 600;
+}
+
+.article .articleGrid .articleCard2 .box h2 {
+  display: block;
+  width: calc(100% - 60px);
+  margin: 20px auto;
+  margin-top: 35px;
+  /* margin-bottom: 0px; */
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: var(--header);
+  padding-left: 0px;
+  color: rgb(47, 56, 46);
+  font-weight: 400;
+  transition: all 0.2s linear;
+  /* border: 1px solid red; */
+}
+
+.article .articleGrid .articleCard2 .box p {
+  display: block;
+  width: calc(100% - 90px);
+  margin: 0 auto;
+
+  font-size: 18px;
+
+  padding: 5px 20px;
+  color: rgb(131, 108, 108);
+  text-transform: none;
+  padding-bottom: 30px;
+}
+
+/* REQUESTS */
+
+.request_cover {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: rgb(242, 240, 236);
+}
+
+.request_cover .request {
+  /* width: 100%; */
+  width: fit-content;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.request_cover .request img {
+  display: inline-block;
+  width: calc(100px - 0px);
+  height: auto;
+}
+.request_cover .request div {
+  display: inline-block;
+}
+
+.request_cover .request div h1 {
+  display: block;
+  position: relative;
+  font-size: 34px;
+  letter-spacing: 1px;
+  width: 40vw;
+  font-family: var(--header);
+  padding-left: 60px;
+  color: rgb(56, 46, 46);
+  font-weight: 500;
+  margin-bottom: 0 !important;
+  /* border: 1px solid red; */
+}
+
+.request_cover .request .read {
+  /* float: right; */
+  display: inline-block;
+  float: none;
+  padding: 15px 30px;
+  margin-left: 45px;
+  transform: translateY(-65%);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 5px rgba(197, 196, 196, 0.404);
+  text-decoration: none;
+  color: rgb(255, 183, 50);
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--card);
+  border: 2px solid rgb(255, 183, 50);
+  transition: all 0.1s linear;
+}
+
+.request_cover .request .read:hover {
+  transition: all 0.1s linear;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 183, 50);
+}
+
+/* Collage */
+
+.collage {
+  display: block;
+  position: relative;
+  margin: 150px auto;
+  /* border: 1px solid red; */
+}
+.collage .collageGrid {
+  display: block;
+  position: relative;
+  width: calc(70% - 0px);
+  margin: 20px auto;
+  overflow: hidden;
+
+  /* border: 1px solid red; */
+}
+
+.collage .collageGrid .row {
+  width: calc(100% - 0px);
+  height: 500px;
+  overflow: hidden;
+  display: flow-root;
+  /* border: 1px solid rgb(24, 170, 31); */
+}
+
+.collage .collageGrid .row .left {
+  width: calc(50% - 0px);
+  float: left;
+  /* border: 1px solid rgb(24, 26, 170); */
+}
+.collage .collageGrid .row .right {
+  width: calc(50% - 0px);
+  float: right;
+  /* border: 1px solid rgb(170, 107, 24); */
+}
+
+.collage .collageGrid .row .full {
+  height: 100%;
+}
+.collage .collageGrid .row .half {
+  height: 50%;
+}
+
+.collage .collageGrid .row div img {
+  width: calc(100% - 0px);
+  height: 100%;
+}
+
+.collage .collageGrid .row .half img {
+  width: calc(50% - 0px);
+  height: 100%;
+}
+
+/* TESTIMONY */
+
+.testimony {
+  display: flow-root;
+  position: relative;
+  width: calc(100% - 0px);
+  height: fit-content;
+  /* height: calc(100vh - 60px); */
+  margin-top: 280px !important;
+  padding-bottom: 80px;
+  background-color: var(--backTheme);
+
+}
+
+.testimony .images {
+  display: flow-root;
+  width: calc(95% - 0px);
+  margin: 0px auto;
+  transform: translateY(-140px);
+  overflow: hidden;
+  /* border: 1px solid rgb(253, 100, 11); */
+}
+
+.testimony .images div {
+  float: left;
+  width: calc(20% - 30px);
+  margin: 0px 15px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+}
+
+.testimony .images div:hover img {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+
+.testimony .images div img {
+  display: block;
+  width: calc(100% - 0px);
+  border-radius: 8px;
+}
+
+.testimony .testimony_txt {
+  float: left;
+  position: relative;
+  /* border: 1px solid red; */
+  width: calc(25vw - 10px);
+  height: fit-content;
+  margin-top: 0;
+  margin-left: 180px;
+  overflow: hidden;
+}
+
+.testimony .testimony_txt p {
+  font-size: 20px;
+  font-family: var(--text);
+  color: red;
+  transform: translateY(10px);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.testimony .testimony_txt h1 {
+  font-size: 50px;
+  font-family: var(--header);
+  /* border: 1px solid red; */
+  color: rgb(56, 46, 46);
+  letter-spacing: 2.5px;
+  margin-top: 0px !important;
+  width: calc(25vw - 0px);
+  overflow: hidden;
+}
+
+.testimony .testimonyGrid {
+  display: inline-block;
+  width: calc(90% - 30vw - 130px);
+  margin-left: 50px;
+  overflow: hidden;
+  /* margin-top: 20vh; */
+
+  /* border: 1px solid red; */
+}
+
+.testimony .testimonyGrid .testi_card {
+  margin: 0 20px;
+  border-radius: 8px;
+  min-height: 300px;
+  /* border: 1px solid rgb(43, 255, 0); */
+}
+
+.testimony .testimonyGrid .testi_card .uppercard {
+  margin: 0;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  /* min-height: 300px; */
+  border: 1px solid rgba(215, 215, 215, 0.7);
+}
+
+.testimony .testimonyGrid .testi_card .uppercard .icon {
+  width: fit-content;
+  border-radius: 50%;
+  padding: 14px 16px;
+  margin-top: 50px;
+  color: white;
+  margin-left: 40px;
+  background-color: var(--theme);
+}
+
+.testimony .testimonyGrid .testi_card .uppercard .content {
+  width: calc(80% - 0px);
+  margin: 0px auto;
+  margin-bottom: 30px;
+  padding: 0 40px;
+  font-size: 23px;
+  font-family: var(--card);
+  color: rgb(131, 129, 129);
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+
+.testimony .testimonyGrid .testi_card .uppercard::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  border-left: 38px solid transparent;
+  border-right: 38px solid transparent;
+  border-top: 20px solid white;
+
+  /* border: 1px solid red; */
+}
+
+.testimony .testimonyGrid .testi_card .author {
+  width: calc(70% - 0px);
+  margin: 30px auto;
+  /* border: 1px solid red; */
+  display: flow-root;
+}
+
+.testimony .testimonyGrid .testi_card .author .img,
+.testimony .testimonyGrid .testi_card .author .info {
+  float: left;
+  /* border: 1px solid red; */
+}
+.testimony .testimonyGrid .testi_card .author .img img {
+  display: block;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.testimony .testimonyGrid .testi_card .author .info {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.testimony .testimonyGrid .testi_card .author .info h3 {
+  font-family: var(--header);
+  color: var(--headerColor);
+  font-size: 20px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  margin: 0 !important;
+  /* border: 1px solid red; */
+}
+
+.testimony .testimonyGrid .testi_card .author .info span {
+  font-family: var(--text);
+  color: var(--theme);
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-left: 10px;
+  /* border: 1px solid red; */
+}
+
+.testi_arrows {
+  display: block;
+  position: absolute;
+  left: 230px;
+  top: calc(64% + 0px);
+  background-color: white;
+  padding: 10px 18px;
+  padding-right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  /* border: 1px solid rebeccapurple; */
+}
+
+.testi_arrows.right {
+  left: 310px;
+  padding-left: 20px;
+  padding-right: 18px;
+}
