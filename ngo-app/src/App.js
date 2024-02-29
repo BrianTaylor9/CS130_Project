@@ -12,6 +12,8 @@ import LogisticsPage from './pages/LogisticsPage';
 import LogisticsDetails from './pages/LogisticsDetails';
 import Blogs from './pages/Blogs';
 import BlogDetails from './pages/BlogDetails';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 import {Header} from './components/Header';
 import {Footer} from './components/Footer'
 import './styles/darkTheme.css';
@@ -35,6 +37,8 @@ function App() {
         <Route path="/logistics/:id" element={<LogisticsDetails />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
 
       {/* <Footer /> */}

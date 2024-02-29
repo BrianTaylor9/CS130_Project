@@ -17,7 +17,6 @@ import lighttheme from "../assets/images/lighttheme.png";
 import { BorderAll } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
   navlinks: {
-    marginLeft: "120px",
     display: "flex",
     paddingTop: "2.5vh",
   },
@@ -255,6 +254,27 @@ export const Header = () => {
                 >
                   Contact
                 </Link>
+
+                <Link
+                  to="/login"
+                  style={{
+                    paddingTop: "0.8vh",
+                  }}
+                  className={darkMode ? classes.darklink : classes.link}
+                >
+                  Log In
+                </Link>
+
+                <Link
+                  to="/signup"
+                  style={{
+                    paddingTop: "0.8vh",
+                  }}
+                  className={darkMode ? classes.darklink : classes.link}
+                >
+                  Sign Up
+                </Link>
+
                 {/* <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
             >Login</Button> */}
