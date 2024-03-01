@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/home.css";
 import ArticleCard from "../components/Articles/ArticleCard";
+import Axios from 'axios';
 
 // DATA
 import { articles } from "../data/data";
 
 export default function Blogs() {
+  const [list, setList] = React.useState([]);
+  useEffect(()=> {  
+    Axios.get('http://localhost:4000/api/articles')
+    .then((res)=> setList(res.data));}, []);
+
   return (
     <>
       <div className="items article blog">
@@ -13,7 +19,7 @@ export default function Blogs() {
         <h1 className="header featured">Articles & Blogs</h1>
 
         <div className="articleGrid blogGrid">
-          {articles.map((card) => (
+          {list.map((card) => (
             <ArticleCard key={card.id} card={card} />
           ))}
         </div>
