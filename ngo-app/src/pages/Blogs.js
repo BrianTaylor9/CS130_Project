@@ -7,10 +7,12 @@ import Axios from 'axios';
 import { articles } from "../data/data";
 
 export default function Blogs() {
+  
   const [list, setList] = React.useState([]);
   useEffect(()=> {  
     Axios.get('http://localhost:4000/api/articles')
     .then((res)=> setList(res.data));}, []);
+  sessionStorage.setItem('articles', JSON.stringify(list));
 
   return (
     <>
