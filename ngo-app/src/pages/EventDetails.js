@@ -11,7 +11,9 @@ import { events } from "../data/data";
 
 export default function EventDetails() {
   const { id } = useParams();
-  const [card, setCard] = useState(events[id]);
+  const events = sessionStorage.getItem("events");
+  // const [card, setCard] = useState(articles[id]);
+  const card = (new Map(Object.entries(JSON.parse(events)))).get(id);
   console.log(card);
 
   //   useEffect(async () => {
