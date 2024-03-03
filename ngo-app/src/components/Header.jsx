@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../utils/ThemeContext";
 import {
   AppBar,
@@ -15,9 +15,13 @@ import GDSCLogo from "../assets/images/logo.png";
 import GDSCLogoDark from "../assets/images/logo.png";
 import lighttheme from "../assets/images/lighttheme.png";
 import { BorderAll } from "@material-ui/icons";
+import { useAuth } from "../utils/AuthContext";
+import axios from "axios";
+import { useCookies } from "react-cookie";
+import { ToastContainer, toast } from "react-toastify";
+
 const useStyles = makeStyles((theme) => ({
   navlinks: {
-    marginLeft: "120px",
     display: "flex",
     paddingTop: "2.5vh",
   },
@@ -72,6 +76,31 @@ export const Header = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const { isLoggedIn, login, logout } = useAuth();
+  const [cookies, removeCookie] = useCookies([]);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const verifyCookie = async () => {
+      const { data } = await axios.post(
+        "http://localhost:4000/volunteerVerify",
+        {},
+        { withCredentials: true }
+      );
+      const { status, user } = data.data;
+      console.log(data.data);
+      return status
+        ? toast(`Hello ${user}`, {
+          position: "top-right",
+        })
+        : (removeCookie("token"));
+    }
+  }, [cookies, removeCookie]);
+
+  const handleLogout = () => {
+    removeCookie("token");
+    logout();
+  }
 
   // const HandleTheme = ()=> {
   //   setDarkMode(!darkMode);
@@ -255,6 +284,41 @@ export const Header = () => {
                 >
                   Contact
                 </Link>
+
+                {isLoggedIn ?
+                  <Link
+                    onClick={handleLogout}
+                    style={{
+                      paddingTop: "0.8vh",
+                    }}
+                    className={darkMode ? classes.darklink : classes.link}
+                  >
+                    Log Out
+                  </Link>
+                :
+                  <>
+                    <Link
+                      to="/login"
+                      style={{
+                        paddingTop: "0.8vh",
+                      }}
+                      className={darkMode ? classes.darklink : classes.link}
+                    >
+                      Log In
+                    </Link>
+
+                    <Link
+                      to="/signup"
+                      style={{
+                        paddingTop: "0.8vh",
+                      }}
+                      className={darkMode ? classes.darklink : classes.link}
+                    >
+                      Sign Up
+                    </Link>
+                  </>
+                }
+
                 {/* <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
             >Login</Button> */}
@@ -275,6 +339,7 @@ export const Header = () => {
           )}
         </Toolbar>
       </AppBar>
+      <ToastContainer />
     </div>
   );
 };

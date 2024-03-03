@@ -12,7 +12,9 @@ import { articles } from "../data/data";
 
 export default function BlogDetails() {
   const { id } = useParams();
-  const [card, setCard] = useState(articles[id]);
+  const articles = sessionStorage.getItem("articles");
+  // const [card, setCard] = useState(articles[id]);
+  const card = (new Map(Object.entries(JSON.parse(articles)))).get(id);
   console.log(card);
 
   //   useEffect(async () => {

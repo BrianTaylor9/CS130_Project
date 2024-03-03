@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./utils/ThemeContext";
 import { UserProvider } from "./utils/UserContext";
 import { LoadingProvider } from "./utils/LoadingContext";
+import { AuthProvider } from "./utils/AuthContext";
+import 'react-toastify/dist/ReactToastify.css';
 
 import { BrowserRouter } from "react-router-dom";
 
@@ -15,7 +17,9 @@ ReactDOM.render(
       <ThemeProvider>
         <LoadingProvider>
           <UserProvider>
-            <App />
+            <AuthProvider>
+              <App />
+            </AuthProvider>
           </UserProvider>
         </LoadingProvider>
       </ThemeProvider>
