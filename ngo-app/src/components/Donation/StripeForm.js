@@ -39,17 +39,47 @@ const StripeForm = ({ money, onSuccessfulDonate }) => {
       }
     }
   };
-    // Call onSuccessfulDonate when donation is successful
-
+  const cardElementOptions = {
+    style: {
+      base: {
+        color: "#32325d",
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+          color: "#aab7c4"
+        }
+      },
+      invalid: {
+        color: "#fa755a",
+        iconColor: "#fa755a"
+      }
+    }
+  };
   return (
-    <>
-      <CardElement />
-      <Button onClick={handleDonate}>
-        <FavoriteIcon />
+    <div className="payment-form">
+      <label htmlFor="card-element">Credit or Debit Card</label>
+      <div className="card-element-container">
+        <CardElement id="card-element" options={cardElementOptions} />
+      </div>
+      <Button 
+        style={{
+          borderRadius: '15px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+          textTransform: 'none',
+          fontWeight: 'bold',
+          backgroundColor: '#E53935',
+          color: 'white',
+          fontSize: '18px',
+          padding: '15px 30px',
+          marginTop: '20px',
+        }}
+        onClick={handleDonate}>
+         <FavoriteIcon style={{ color: 'white', marginRight: '8px' }} />
         Donate
       </Button>
-    </>
-  );
+    </div>
+  );   
   };
 
 export default StripeForm;

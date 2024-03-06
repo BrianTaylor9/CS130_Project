@@ -8,6 +8,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
+import '../../styles/donation.css'
 
 // Stripe imports
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
@@ -17,15 +18,12 @@ const stripePromise = loadStripe('pk_test_51Oq5JQDARKsSSkkt2I0TnciYSfi6NBKNWA4XB
 
 
 export default function DonationForm({ card }) {
-  // const stripe = useStripe();
-  // const elements = useElements();
   const [money, setMoney] = useState("");
   const [transaction, setTransaction] = useState(defaultTransaction);
 
   const handleMoney = (e) => {                                                   
     setMoney(e.target.value);
     setTransaction({ ...transaction, amount: e.target.value });
-    //  console.log(money)
   };
 
   function updateMoney(amt) {
