@@ -55,22 +55,9 @@ export default function DonationForm({ card }) {
     
     // Resetting the money state to an empty string
     setMoney("");
-    
-    // Optionally, send a confirmation email or perform other side effects
-    // sendMail(transaction); // Assuming you have transaction details and sendMail implemented
-  
-    // Display a success message
     alert("Thank you for your donation!");
-  
-    // Redirect the user to a thank-you page or another page
-    // This is just an example. Depending on your routing setup (e.g., React Router), the method may differ.
-    // window.location.href = '/thank-you';
-  };
 
-  // const options = {
-  //   // passing the client secret obtained from the server
-  //   clientSecret: '{{CLIENT_SECRET}}',
-  // };
+  };
 
   return (
   <>
@@ -194,16 +181,6 @@ export default function DonationForm({ card }) {
                 <p className="amt">${money}</p>
               </div>
             </div>
-            {/* <div className="row">
-              <Button
-                variant="contained"
-                onClick={handleDonate}
-                className="donateBtn"
-              >
-                <FavoriteIcon sx={{ fontSize: "23px", pr: "5px", pt: "5px" }} />
-                <span className="txt">DONATE</span>
-              </Button>
-            </div> */}
           </div>
           <StripeForm money={money} onSuccessfulDonate={onSuccessfulDonate} />
         </div>

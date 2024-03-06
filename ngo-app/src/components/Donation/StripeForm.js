@@ -1,44 +1,50 @@
 // StripeForm.js
-import React from 'react';
+import React, { useState } from 'react';
+// Import Stripe elements and Material UI components
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { Button } from "@material-ui/core";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
 
+// StripeForm component accepting props for handling donations
 const StripeForm = ({ money, onSuccessfulDonate }) => {
   const stripe = useStripe();
   const elements = useElements();
+  // State for managing payment success and errors
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [paymentError, setPaymentError] = useState('');
 
+  // Function to handle donation logic
   const handleDonate = async (e) => {
     e.preventDefault();
-    if (!stripe || !elements) {
-      // Stripe.js has not yet loaded.
+    if (!stripe || !elements) { // Check if Stripe is properly initialized
       return;
     }
   
-    // Assuming you have an endpoint to create a payment intent
+    // Creating a payment intent by sending a request to your server
     const response = await fetch('http://localhost:4000/recievePayment', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ amount: money, currency: 'USD'}),
+      body: JSON.stringify({ amount: money*100, currency: 'USD'}),
     });
     const paymentIntent = await response.json();
   
+    // Confirming the card payment with Stripe
     const result = await stripe.confirmCardPayment(paymentIntent.clientSecret, {
       payment_method: { card: elements.getElement(CardElement) },
     });
   
+    // Handling the payment result
     if (result.error) {
-      console.log(result.error.message);
-      // Handle errors here
-    } else {
-      if (result.paymentIntent.status === 'succeeded') {
-        console.log('Payment succeeded!');
-        // sendMail(transaction);
-        // setTransaction(defaultTransaction);
-        // You can also redirect the user or show a success message
-      }
-    }
+      setPaymentError(result.error.message); // Set error message on failure
+    } else if (result.paymentIntent.status === 'succeeded') {
+      setPaymentSuccess(true); // Set payment success state on success
+      setPaymentError(''); // Clear any errors
+    }    
   };
+
+  // Styling options for the CardElement
   const cardElementOptions = {
     style: {
       base: {
@@ -56,8 +62,20 @@ const StripeForm = ({ money, onSuccessfulDonate }) => {
       }
     }
   };
+
+  // Render the form, CardElement, and dynamic alerts for success/error messages
   return (
     <div className="payment-form">
+      {paymentError && (
+        <Alert variant="filled" severity="error">
+          {paymentError}
+        </Alert>
+      )}
+      {paymentSuccess && (
+        <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+          Here is a gentle confirmation that your action was successful.
+        </Alert>
+      )}
       <label htmlFor="card-element">Credit or Debit Card</label>
       <div className="card-element-container">
         <CardElement id="card-element" options={cardElementOptions} />
@@ -80,6 +98,6 @@ const StripeForm = ({ money, onSuccessfulDonate }) => {
       </Button>
     </div>
   );   
-  };
+};
 
-export default StripeForm;
+export default StripeForm; // Export the StripeForm component

@@ -574,3 +574,15 @@ label {
   color: #32325d;
   font-size: 16px;
 }
+
+label[for="card-element"] {
+  display: block; 
+  color: #32325d;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding-top: 20px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+
