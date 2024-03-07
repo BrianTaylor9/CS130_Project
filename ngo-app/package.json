@@ -18,7 +18,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "@trendyol-js/react-carousel": "^2.0.1",
+    "@trendyol-js/react-carousel": "^3.0.2",
     "axios": "^0.26.1",
     "emailjs-com": "^3.2.0",
     "google-map-react": "^2.1.10",
@@ -31,6 +31,7 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.28.1",
+    "react-stripe-js": "^1.1.5",
     "react-sweet-progress": "^1.1.2",
     "react-toastify": "^8.2.0",
     "web-vitals": "^2.1.4"
