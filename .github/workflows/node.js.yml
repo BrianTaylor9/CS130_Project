@@ -28,7 +28,6 @@ jobs:
         cache: 'npm'
         cache-dependency-path: 'ngo-app/package-lock.json'
     - working-directory: './ngo-app'
-    - run: |
-          npm i
-          npm run build
+    - run: npm i
+    - run: npm run build
     # - run: npm test
