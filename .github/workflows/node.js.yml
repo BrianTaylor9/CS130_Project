@@ -27,7 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: 'ngo-app/package-lock.json'
-    - working-directory: './ngo-app'
     - run: npm i
+      working-directory: './ngo-app'
     - run: npm run build
+      working-directory: './ngo-app'
     # - run: npm test
