@@ -2,6 +2,8 @@ import React from 'react'
 import { Button } from "@material-ui/core";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+
+// EventDesc component displays detailed information about an event and provides a registration option.
 export default function EventDesc({card}) {
   return (
     <>

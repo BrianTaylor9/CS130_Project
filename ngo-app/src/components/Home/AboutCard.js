@@ -1,5 +1,6 @@
 import React from 'react'
 
+// AboutCard component takes 'card' prop to render detailed information.
 export default function AboutCard({card}) {
   return (
     <div className="aboutCard">

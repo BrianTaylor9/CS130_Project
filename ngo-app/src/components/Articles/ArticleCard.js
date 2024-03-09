@@ -4,6 +4,7 @@ import "react-sweet-progress/lib/style.css";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 
+// Item component displays a single article's summary, including image, author, and title.
 export default function Item({ card }) {
 
   const href = `/blog/${card.id}`

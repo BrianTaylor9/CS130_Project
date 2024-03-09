@@ -1,5 +1,6 @@
 import React from 'react'
 
+// EventInfo component provides detailed information about an event including category, date, timings, contact, venue, and mode.
 export default function EventInfo({card}) {
   return (
     <>

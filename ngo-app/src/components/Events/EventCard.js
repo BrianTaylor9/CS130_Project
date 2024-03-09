@@ -6,6 +6,7 @@ import LocationOnSharpIcon from "@mui/icons-material/LocationOnSharp";
 import AccessTimeSharpIcon from "@mui/icons-material/AccessTimeSharp";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 
+// EventCard component displays a summary of an event and provides links to join or view more details.
 export default function EventCard({ card }) {
 
   const href = `/event/${card.id}`

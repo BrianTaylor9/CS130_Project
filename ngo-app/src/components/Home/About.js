@@ -5,7 +5,7 @@ import AboutCard from "./AboutCard";
 // DATA
 import {about} from '../../data/data';
 
-
+// About component displays sections from the 'about' data.
 export default function About() {
   return (
     <>
