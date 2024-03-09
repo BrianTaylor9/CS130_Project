@@ -1,11 +1,13 @@
 const http = require('http');
 const database = require('./database');
 
+// Creating an HTTP server
 http.createServer(async (req,res)=> {
     // THIS IS FOR CORS ERRORS
     res.setHeader('Access-Control-Allow-Origin', '*'); /* @dev First, read about security */
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
     res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+    // Handling requests to the articles API endpoint
     if(req.url == '/api/articles'){
         try {
             res.writeHead(200, {'Content-Type':'application/text'});
