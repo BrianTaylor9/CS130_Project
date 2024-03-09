@@ -34,6 +34,7 @@
     "react-stripe-js": "^1.1.5",
     "react-sweet-progress": "^1.1.2",
     "react-toastify": "^8.2.0",
+    "stripe": "^14.20.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
