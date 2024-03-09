@@ -10,22 +10,24 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 import '../../styles/donation.css'
 
-// Stripe imports
+// Stripe imports for payment processing
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import StripeForm from './StripeForm';
 const stripePromise = loadStripe('pk_test_51Oq5JQDARKsSSkkt2I0TnciYSfi6NBKNWA4XB5WApLdM1r6CmHnt4a8GCEx8K4LGLrF6aZAgdtvrjvmk7fY4M6Cu004LmAH6UQ');
 
-
+// Main component for handling donations
 export default function DonationForm({ card }) {
   const [money, setMoney] = useState("");
   const [transaction, setTransaction] = useState(defaultTransaction);
 
+  // Handles change in donation amount input
   const handleMoney = (e) => {                                                   
     setMoney(e.target.value);
     setTransaction({ ...transaction, amount: e.target.value });
   };
 
+  // Function to update donation amount with predefined values
   function updateMoney(amt) {
     if (amt > 0) {
       setMoney(amt);
@@ -38,6 +40,7 @@ export default function DonationForm({ card }) {
     setTransaction({ ...transaction, amount: amt });
   }
 
+  // Handles change in form inputs other than amount
   const handleInputs = (e) => {
     let name = e.target.name;
 
@@ -49,6 +52,7 @@ export default function DonationForm({ card }) {
     }
   };
 
+  // Function called upon successful donation
   const onSuccessfulDonate = () => {
     // Resetting transaction state to default
     setTransaction(defaultTransaction);
