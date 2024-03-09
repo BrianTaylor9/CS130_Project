@@ -4,7 +4,7 @@ import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 // DATA
 import {organization} from '../../data/data';
 
-
+// The Organization component displays details of a specific organization.
 export default function Organization({card}) {
 
     const org = organization[card.id] ;
