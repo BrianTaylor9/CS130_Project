@@ -4,8 +4,10 @@ import "react-sweet-progress/lib/style.css";
 import { Button } from "@material-ui/core";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-
+// The Item component displays individual campaign cards with details and a progress bar.
 export default function Item({ card, displayBtn  }) {
+  
+  // Define color themes for the progress bar based on the campaign field
   const theme = {
     medical: {
       color: "rgb(0, 217, 255)",

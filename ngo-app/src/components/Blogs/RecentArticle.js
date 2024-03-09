@@ -1,6 +1,7 @@
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import React from 'react'
 
+// RecentArticle component displays a brief preview of a recent article.
 export default function RecentArticle({card}) {
 
     const href = `/blog/${card.id}`

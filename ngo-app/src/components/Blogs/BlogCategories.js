@@ -3,6 +3,7 @@ import { categories } from "../../data/data";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { cardActionAreaClasses } from "@mui/material";
 
+// This component renders a list of categories dynamically
 export default function BlogCategories() {
   return (
     <div className="blogCat">
