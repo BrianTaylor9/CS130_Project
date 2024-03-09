@@ -10,7 +10,7 @@ export default function Blogs() {
   
   const [list, setList] = React.useState([]);
   useEffect(()=> {  
-    Axios.get('http://localhost:4000/api/articles')
+    Axios.get('http://localhost:4000/api/blogs')
     .then((res)=> setList(res.data));}, []);
   sessionStorage.setItem('articles', JSON.stringify(list));
 
