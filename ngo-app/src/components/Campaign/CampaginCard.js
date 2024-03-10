@@ -4,8 +4,27 @@ import "react-sweet-progress/lib/style.css";
 import { Button } from "@material-ui/core";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-// The Item component displays individual campaign cards with details and a progress bar.
-export default function Item({ card, displayBtn  }) {
+/**
+ * Displays a campaign card with details and a progress bar.
+ * 
+ * This component visualizes a single campaign, including its title, description, 
+ * fundraising progress, and an optional button to navigate to the donation page.
+ * The progress bar's theme changes based on the campaign's field.
+ *
+ * @param {{ card: { id: string, src: string, field: string, title: string, content: string, collected: number, goal: number }, displayBtn: boolean }} props - The properties passed to the component.
+ * @param {Object} props.card - The campaign data to be displayed.
+ * @param {string} props.card.id - The unique identifier of the campaign.
+ * @param {string} props.card.src - The source URL of the campaign's image.
+ * @param {string} props.card.field - The campaign's category, which determines the progress bar's theme.
+ * @param {string} props.card.title - The title of the campaign.
+ * @param {string} props.card.content - The description of the campaign.
+ * @param {number} props.card.collected - The amount collected for the campaign so far.
+ * @param {number} props.card.goal - The campaign's fundraising goal.
+ * @param {boolean} props.displayBtn - Flag indicating whether the donation button should be displayed.
+ * 
+ * @returns {React.ReactElement} The campaign card component.
+ */
+function Item({ card, displayBtn  }) {
   
   // Define color themes for the progress bar based on the campaign field
   const theme = {
@@ -71,3 +90,5 @@ export default function Item({ card, displayBtn  }) {
     </a>
   );
 }
+
+export default Item

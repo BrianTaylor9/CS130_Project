@@ -3,8 +3,14 @@ import { Button } from "@material-ui/core";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 
-// EventDesc component displays detailed information about an event and provides a registration option.
-export default function EventDesc({card}) {
+/**
+ * Renders detailed information about an event, including its title, description, requirements, 
+ * and provides a registration option via a button.
+ * 
+ * @param {{ card: { title: string, desc: string, requirements: string }}} props - Event details to display.
+ * @returns {React.ReactElement} A detailed view of the event with description and registration option.
+ */
+function EventDesc({card}) {
   return (
     <>
       <h1 className="header">{card.title}</h1>
@@ -37,3 +43,5 @@ export default function EventDesc({card}) {
     </>
   );
 }
+
+export default EventDesc

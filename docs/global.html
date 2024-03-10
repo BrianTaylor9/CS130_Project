@@ -104,6 +104,118 @@
     
 
     
+    <h4 class="name" id="About"><span class="type-signature"></span>About<span class="signature">()</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Renders the "About" section of the website using data to display multiple "AboutCard" components.
+This component pulls information from the 'about' data object and dynamically generates a grid of cards
+that describe various aspects of what the organization or website does.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Home_About.js.html">Home/About.js</a>, <a href="Home_About.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A React element containing a grid of "AboutCard" components that describe the organization or website.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="BlogCategories"><span class="type-signature"></span>BlogCategories<span class="signature">()</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
     
 
@@ -347,6 +459,118 @@ The component provides sharing functionality and displays the post's vote count.
         
 <div class="param-desc">
     - A React element representing the detailed view of a blog post, with options to share and vote.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Campaigns"><span class="type-signature"></span>Campaigns<span class="signature">()</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Renders a carousel of featured campaigns, allowing users to browse through them. It utilizes the Carousel component from
+"@trendyol-js/react-carousel" for functionality and includes custom left and right arrows for navigation.
+The campaigns data is sourced from the 'campaigns' dataset.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Home_Campaigns.js.html">Home/Campaigns.js</a>, <a href="Home_Campaigns.js.html#line33">line 33</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A React element displaying a carousel of featured campaigns.
 </div>
 
 
@@ -713,6 +937,647 @@ The grid will be styled and arranged based on the CSS class 'donationGrid'.
     
 
     
+    <h4 class="name" id="EventCard"><span class="type-signature"></span>EventCard<span class="signature">(props)</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Renders a summary card for an event with information and interaction options.
+The card displays the event's image, category, date, location, and time. It also offers
+links for users to join the event or view more details.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>props</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The properties passed to the component.
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>card</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The event data to be displayed in the card.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Events_EventCard.js.html">Events/EventCard.js</a>, <a href="Events_EventCard.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The event summary card component.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="EventDesc"><span class="type-signature"></span>EventDesc<span class="signature">(props)</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Renders detailed information about an event, including its title, description, requirements, 
+and provides a registration option via a button.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>props</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Event details to display.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Events_EventDesc.js.html">Events/EventDesc.js</a>, <a href="Events_EventDesc.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A detailed view of the event with description and registration option.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="EventInfo"><span class="type-signature"></span>EventInfo<span class="signature">(props)</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Provides a comprehensive overview of an event's specifics such as category, date, timings, contact info, venue, and whether it's an in-person or virtual event.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>props</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Detailed information about the event.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Events_EventInfo.js.html">Events/EventInfo.js</a>, <a href="Events_EventInfo.js.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Elements summarizing key event details for attendees.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Events"><span class="type-signature"></span>Events<span class="signature">()</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Events component showcases a list of upcoming events, aiming to motivate users to participate. 
+It dynamically generates EventCard components for each event, utilizing data from the 'events' dataset. 
+This setup allows for easy updates and additions to the list of events as new data becomes available.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Home_Events.js.html">Home/Events.js</a>, <a href="Home_Events.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A React element displaying a grid of upcoming event cards for user engagement.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="Item"><span class="type-signature"></span>Item<span class="signature">(card)</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
     
 
@@ -845,6 +1710,428 @@ It uses a 'card' prop with the article's data.
         
 <div class="param-desc">
     - A React element that displays the article's summary card.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">React.ReactElement</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Item"><span class="type-signature"></span>Item<span class="signature">(props)</span><span class="type-signature"> &rarr; {React.ReactElement}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Displays a campaign card with details and a progress bar.
+
+This component visualizes a single campaign, including its title, description, 
+fundraising progress, and an optional button to navigate to the donation page.
+The progress bar's theme changes based on the campaign's field.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>props</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The properties passed to the component.
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>card</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The campaign data to be displayed.
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the campaign.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>src</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The source URL of the campaign's image.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>field</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The campaign's category, which determines the progress bar's theme.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The title of the campaign.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The description of the campaign.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>collected</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The amount collected for the campaign so far.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>goal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The campaign's fundraising goal.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>displayBtn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Flag indicating whether the donation button should be displayed.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Campaign_CampaginCard.js.html">Campaign/CampaginCard.js</a>, <a href="Campaign_CampaginCard.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The campaign card component.
 </div>
 
 
@@ -1575,13 +2862,13 @@ to create a secure credit card input form and handle payment logic.
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BlogCategories">BlogCategories</a></li><li><a href="global.html#BlogDesc">BlogDesc</a></li><li><a href="global.html#DonationBox">DonationBox</a></li><li><a href="global.html#DonationForm">DonationForm</a></li><li><a href="global.html#DonationGrid">DonationGrid</a></li><li><a href="global.html#Item">Item</a></li><li><a href="global.html#Organization">Organization</a></li><li><a href="global.html#RecentArticle">RecentArticle</a></li><li><a href="global.html#RecentBlogs">RecentBlogs</a></li><li><a href="global.html#StripeForm">StripeForm</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#About">About</a></li><li><a href="global.html#BlogCategories">BlogCategories</a></li><li><a href="global.html#BlogDesc">BlogDesc</a></li><li><a href="global.html#Campaigns">Campaigns</a></li><li><a href="global.html#DonationBox">DonationBox</a></li><li><a href="global.html#DonationForm">DonationForm</a></li><li><a href="global.html#DonationGrid">DonationGrid</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventDesc">EventDesc</a></li><li><a href="global.html#EventInfo">EventInfo</a></li><li><a href="global.html#Events">Events</a></li><li><a href="global.html#Item">Item</a></li><li><a href="global.html#Organization">Organization</a></li><li><a href="global.html#RecentArticle">RecentArticle</a></li><li><a href="global.html#RecentBlogs">RecentBlogs</a></li><li><a href="global.html#StripeForm">StripeForm</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Mar 10 2024 14:39:03 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Mar 10 2024 16:22:23 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
