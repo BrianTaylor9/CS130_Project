@@ -1,8 +1,14 @@
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import React from 'react'
 
-// RecentArticle component displays a brief preview of a recent article.
-export default function RecentArticle({card}) {
+/**
+ * Renders a preview of a recent article including its image, publication date, and title.
+ * It links to the full article for users to read more.
+ *
+ * @param {{ id: string, src: string, date: string, title: string }} card - An object containing the details of the article.
+ * @returns {React.ReactElement} - A React element representing a brief preview of a recent article.
+ */
+function RecentArticle({card}) {
 
     const href = `/blog/${card.id}`
   return (
@@ -25,3 +31,5 @@ export default function RecentArticle({card}) {
     </div>
   );
 }
+
+export default RecentArticle

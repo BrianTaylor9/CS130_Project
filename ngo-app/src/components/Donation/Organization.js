@@ -4,8 +4,14 @@ import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 // DATA
 import {organization} from '../../data/data';
 
-// The Organization component displays details of a specific organization.
-export default function Organization({card}) {
+/**
+ * Organization component that displays details of a specific organization.
+ * It receives a 'card' object as a prop which contains the organization's information.
+ *
+ * @param {{ id: string, date: string, field: string }} card - An object representing an organization.
+ * @returns {React.ReactElement} - A React element that renders organization details.
+ */
+function Organization({card}) {
 
     const org = organization[card.id] ;
     console.log(card)
@@ -41,3 +47,5 @@ export default function Organization({card}) {
     </>
   );
 }
+
+export default Organization
