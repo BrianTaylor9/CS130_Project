@@ -91,16 +91,16 @@ export const Header = () => {
       console.log(data.data);
       return status
         ? toast(`Hello ${user}`, {
-          position: "top-right",
-        })
-        : (removeCookie("token"));
-    }
+            position: "top-right",
+          })
+        : removeCookie("token");
+    };
   }, [cookies, removeCookie]);
 
   const handleLogout = () => {
     removeCookie("token");
     logout();
-  }
+  };
 
   // const HandleTheme = ()=> {
   //   setDarkMode(!darkMode);
@@ -245,7 +245,7 @@ export const Header = () => {
                   Donation
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/Admin"
                   className={darkMode ? classes.darklink : classes.link}
                   style={{
@@ -253,7 +253,7 @@ export const Header = () => {
                   }}
                 >
                   Admin
-                </Link>
+                </Link> */}
 
                 <Link
                   to="/logistics"
@@ -275,7 +275,7 @@ export const Header = () => {
                   Blogs
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/contact"
                   style={{
                     paddingTop: "0.8vh",
@@ -283,9 +283,9 @@ export const Header = () => {
                   className={darkMode ? classes.darklink : classes.link}
                 >
                   Contact
-                </Link>
+                </Link> */}
 
-                {isLoggedIn ?
+                {isLoggedIn ? (
                   <Link
                     onClick={handleLogout}
                     style={{
@@ -295,7 +295,7 @@ export const Header = () => {
                   >
                     Log Out
                   </Link>
-                :
+                ) : (
                   <>
                     <Link
                       to="/login"
@@ -307,7 +307,7 @@ export const Header = () => {
                       Log In
                     </Link>
 
-                    <Link
+                    {/* <Link
                       to="/signup"
                       style={{
                         paddingTop: "0.8vh",
@@ -315,9 +315,9 @@ export const Header = () => {
                       className={darkMode ? classes.darklink : classes.link}
                     >
                       Sign Up
-                    </Link>
+                    </Link> */}
                   </>
-                }
+                )}
 
                 {/* <Button style={{width:"120px" ,height:"35px" , fontSize:"18px",
             backgroundImage: `linear-gradient(to right,#2871FA, #0214FC)`, color:"white"}}
