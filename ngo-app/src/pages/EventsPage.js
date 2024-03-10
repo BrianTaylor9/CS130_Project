@@ -6,7 +6,17 @@ import { LoadingContext } from "../utils/LoadingContext";
 import LoaderComp from "../components/LoaderComp";
 
 // DATA
-import { events } from "../data/data";
+// import { events } from "../data/data";
+
+const {
+  REACT_APP_IS_PROD,
+  REACT_APP_VERCEL_URL,
+  REACT_APP_EVENTS_URL,
+  REACT_APP_LOCALHOST_URL,
+} = process.env;
+
+const URL = REACT_APP_IS_PROD ? REACT_APP_VERCEL_URL : REACT_APP_LOCALHOST_URL;
+console.log(`${URL}${REACT_APP_EVENTS_URL}`);
 
 export default function EventsPage() {
   const [events, setList] = React.useState([]);
@@ -14,7 +24,7 @@ export default function EventsPage() {
 
   const fectchData = useCallback(() => {
     setIsLoading(true);
-    Axios.get("http://localhost:4000/api/events").then((res) => {
+    Axios.get(`${URL}${REACT_APP_EVENTS_URL}`).then((res) => {
       setList(res.data);
     });
     if (events.length > 1) {
