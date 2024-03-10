@@ -5,7 +5,7 @@ const app = express();
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./Routes/AuthRoutes");
-const paymentRoutes = require("./Routes/PaymentRoutes")
+const paymentRoutes = require("./Routes/PaymentRoutes");
 const blogsEventsRoutes = require("./Routes/EventsBlogsRoutes");
 const { MONGO_URL } = process.env;
 const PORT = parseInt(process.env.PORT);
@@ -15,14 +15,18 @@ mongoose
   .then(() => console.log("MongoDB is connected successfully"))
   .catch((err) => console.error(err));
 
-  app.use(
-    cors({
-      origin: ["http://localhost:4000", "http://localhost:3000"],
-      // origin: false,
-      methods: ["GET", "POST", "PUT", "DELETE"],
-      credentials: true,
-    })
-  );
+app.use(
+  cors({
+    origin: [
+      "https://cs-130-one.vercel.app/",
+      "http://localhost:4000",
+      "http://localhost:3000",
+    ],
+    // origin: false,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 app.use(express.json());
