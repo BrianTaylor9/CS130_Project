@@ -18,7 +18,7 @@ mongoose
 app.use(
   cors({
     origin: [
-      "https://cs-130-one.vercel.app/",
+      "https://cs-130-ngo.vercel.app/", // deployed URL
       "http://localhost:4000",
       "http://localhost:3000",
     ],
