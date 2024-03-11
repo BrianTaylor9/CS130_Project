@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import InputLabel from '@mui/material/InputLabel';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const defaultTheme = createTheme();
@@ -79,9 +80,10 @@ export default function LoginPage() {
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                            Sign in
+                            Log in
                         </Typography>
                         <Box component="form" onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
+                            <InputLabel htmlFor="email">Email Address</InputLabel>
                             <TextField
                                 margin="normal"
                                 required
@@ -92,6 +94,7 @@ export default function LoginPage() {
                                 autoComplete="email"
                                 autoFocus
                             />
+                            <InputLabel htmlFor="password">Password</InputLabel>
                             <TextField
                                 margin="normal"
                                 required
@@ -108,7 +111,7 @@ export default function LoginPage() {
                                 variant="contained"
                                 sx={{ mt: 3, mb: 2 }}
                             >
-                            Sign In
+                            Log In
                             </Button>
                             <Grid container>
                                 <Grid item>
