@@ -307,7 +307,7 @@ export const Header = () => {
                       Log In
                     </Link>
 
-                    {/* <Link
+                    <Link
                       to="/signup"
                       style={{
                         paddingTop: "0.8vh",
@@ -315,7 +315,7 @@ export const Header = () => {
                       className={darkMode ? classes.darklink : classes.link}
                     >
                       Sign Up
-                    </Link> */}
+                    </Link>
                   </>
                 )}
 
