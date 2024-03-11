@@ -22,7 +22,15 @@ const RightArrow = () => {
     </h1>
   );
 };
-export default function Campaigns() {
+
+/**
+ * Renders a carousel of featured campaigns, allowing users to browse through them. It utilizes the Carousel component from
+ * "@trendyol-js/react-carousel" for functionality and includes custom left and right arrows for navigation.
+ * The campaigns data is sourced from the 'campaigns' dataset.
+ * 
+ * @returns {React.ReactElement} A React element displaying a carousel of featured campaigns.
+ */
+function Campaigns() {
   return (
     <>
       <div className="items campaign">
@@ -55,3 +63,5 @@ export default function Campaigns() {
     </>
   );
 }
+
+export default Campaigns

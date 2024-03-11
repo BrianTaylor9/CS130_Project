@@ -10,22 +10,40 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 import '../../styles/donation.css'
 
-// Stripe imports
+// Stripe imports for payment processing
 import { Elements, useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import StripeForm from './StripeForm';
 const stripePromise = loadStripe('pk_test_51Oq5JQDARKsSSkkt2I0TnciYSfi6NBKNWA4XB5WApLdM1r6CmHnt4a8GCEx8K4LGLrF6aZAgdtvrjvmk7fY4M6Cu004LmAH6UQ');
 
-
-export default function DonationForm({ card }) {
+/**
+ * Main component for handling donations.
+ * 
+ * Utilizes Stripe for payment processing and allows users to choose or input
+ * a donation amount, fill in their details, and submit their donation.
+ * 
+ * @param {Object} card - Contains information about the donation being made.
+ * @returns React component rendering the donation form.
+ */
+function DonationForm({ card }) {
   const [money, setMoney] = useState("");
   const [transaction, setTransaction] = useState(defaultTransaction);
 
+  /**
+   * Handles change in donation amount input.
+   * 
+   * @param {Event} e - The event triggered by changing the donation amount input.
+   */
   const handleMoney = (e) => {                                                   
     setMoney(e.target.value);
     setTransaction({ ...transaction, amount: e.target.value });
   };
 
+  /**
+   * Updates donation amount with predefined values.
+   * 
+   * @param {number} amt - The amount to update the donation to.
+   */
   function updateMoney(amt) {
     if (amt > 0) {
       setMoney(amt);
@@ -38,6 +56,11 @@ export default function DonationForm({ card }) {
     setTransaction({ ...transaction, amount: amt });
   }
 
+  /**
+   * Handles changes in form inputs other than the amount.
+   * 
+   * @param {Event} e - The event triggered by changing any form input except amount.
+   */
   const handleInputs = (e) => {
     let name = e.target.name;
 
@@ -49,6 +72,9 @@ export default function DonationForm({ card }) {
     }
   };
 
+  /**
+   * Called upon successful donation to reset form and state.
+   */
   const onSuccessfulDonate = () => {
     // Resetting transaction state to default
     setTransaction(defaultTransaction);
@@ -188,3 +214,5 @@ export default function DonationForm({ card }) {
   </> 
   );
 }
+
+export default DonationForm

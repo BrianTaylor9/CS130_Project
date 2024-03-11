@@ -8,7 +8,16 @@ import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import { useNavigate } from 'react-router-dom';
 
-// StripeForm component accepting props for handling donations
+/**
+ * Provides a form for making payments using Stripe.
+ * 
+ * This component is a functional React component that utilizes the Stripe.js library
+ * to create a secure credit card input form and handle payment logic.
+ * 
+ * @param {Object} props - Component props
+ * @param {number} props.money - Amount of money to be processed
+ * @param {function} props.onSuccessfulDonate - Callback function upon successful donation
+ */
 const StripeForm = ({ money, onSuccessfulDonate }) => {
   const stripe = useStripe();
   const elements = useElements();

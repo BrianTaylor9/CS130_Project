@@ -1,7 +1,16 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import ShareIcon from "@mui/icons-material/Share";export default function BlogDesc({ card }) {
+import ShareIcon from "@mui/icons-material/Share";
+
+/**
+ * Displays the description and interactive elements for a blog post.
+ * The component provides sharing functionality and displays the post's vote count.
+ * 
+ * @param {{ title: string, desc: string, vote: number }} card - An object containing the blog post details, including its title, description, and vote count.
+ * @returns {React.ReactElement} - A React element representing the detailed view of a blog post, with options to share and vote.
+ */
+function BlogDesc({ card }) {
   return (
     <>
       <h1 className="header">{card.title}</h1>
@@ -29,3 +38,5 @@ import ShareIcon from "@mui/icons-material/Share";export default function BlogDe
     </>
   );
 }
+
+export default BlogDesc

@@ -3,7 +3,13 @@ import { categories } from "../../data/data";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { cardActionAreaClasses } from "@mui/material";
 
-export default function BlogCategories() {
+/**
+ * BlogCategories component renders a list of article categories dynamically from the provided 'categories' data.
+ * Each category is rendered as a clickable element that leads to the respective category page.
+ *
+ * @returns {React.ReactElement} - A React element that displays a list of blog categories.
+ */
+function BlogCategories() {
   return (
     <div className="blogCat">
       <h1 className="blogHeader">Categories</h1>
@@ -21,3 +27,5 @@ export default function BlogCategories() {
     </div>
   );
 }
+
+export default BlogCategories
