@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import InputLabel from "@mui/material/InputLabel";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const defaultTheme = createTheme();
@@ -66,6 +67,7 @@ export default function SignupPage() {
 
     return(
         <>
+            <ToastContainer />
             <ThemeProvider theme={defaultTheme}>
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
@@ -86,6 +88,7 @@ export default function SignupPage() {
                         <Box component="form" noValidate onSubmit={handleSignup} sx={{ mt: 3 }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12}>
+                                    <InputLabel htmlFor="email">Email Address</InputLabel>
                                     <TextField
                                         required
                                         fullWidth
@@ -96,6 +99,7 @@ export default function SignupPage() {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
+                                    <InputLabel htmlFor="username">Username</InputLabel>
                                     <TextField
                                         required
                                         fullWidth
@@ -106,6 +110,7 @@ export default function SignupPage() {
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
+                                    <InputLabel htmlFor="password">Password</InputLabel>
                                     <TextField
                                         required
                                         fullWidth
@@ -136,7 +141,6 @@ export default function SignupPage() {
                     </Box>
                 </Container>
             </ThemeProvider>
-            <ToastContainer />
         </>
     )
 }
