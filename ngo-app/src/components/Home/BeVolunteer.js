@@ -13,7 +13,7 @@ export default function () {
             There are many variations of passages of lore available but the
             majority have suffered alteration.
           </p>
-          <a href="#">
+          <a href="/events">
             <GroupAddIcon />
             JOIN
           </a>
@@ -21,10 +21,10 @@ export default function () {
         <div className="elem v_right">
           <h1>Help by Donating</h1>
           <p>
-            There are many variations of passages of lore available but the
+            / There are many variations of passages of lore available but the
             majority have suffered alteration.
           </p>
-          <a href="#">
+          <a href="/donate">
             <FavoriteIcon />
             DONATE
           </a>
