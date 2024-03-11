@@ -5,6 +5,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 
+// LogisticsMailTo creates a 'mailto:' link with optional subject and body
 const LogisticsMailTo = ({ email, subject = "", body = "", children }) => {
   let params = subject || body ? "?" : "";
   if (subject) params += `subject=${encodeURIComponent(subject)}`;
@@ -17,6 +18,8 @@ const LogisticsMailTo = ({ email, subject = "", body = "", children }) => {
   );
 };
 
+// The LogisticDesc component displays detailed information about a specific logistics activity,
+// including requirements and options to contact the organization via email or call.
 export default function LogisticDesc({ card }) {
   const LogisticsMailTemplate = {
     email: card.organization.email,

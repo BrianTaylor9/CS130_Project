@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
+/**
+ * Mongoose schema for VolunteerUser.
+ * Includes fields for email, username, password, and account creation date.
+ */
 const volunteerUserSchema = new mongoose.Schema({
   email: {
     type: String,

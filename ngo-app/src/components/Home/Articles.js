@@ -4,6 +4,15 @@ import ArticleCard from "../Articles/ArticleCard";
 // DATA
 import { articles } from "../../data/data";
 
+/**
+ * Renders a curated list of articles and news pieces. This component showcases a selection
+ * of articles from the provided data, along with specialized content cards.
+ * 
+ * It displays the articles in a grid layout, highlighting featured articles and news
+ * items to engage the website's visitors with the latest updates and informative content.
+ *
+ * @returns {React.ReactElement} A React element containing the articles grid, featured articles, and news sections.
+ */
 export default function Aticles() {
   return (
     <>

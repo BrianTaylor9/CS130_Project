@@ -6,7 +6,17 @@ import LocationOnSharpIcon from "@mui/icons-material/LocationOnSharp";
 import AccessTimeSharpIcon from "@mui/icons-material/AccessTimeSharp";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 
-export default function EventCard({ card }) {
+/**
+ * Renders a summary card for an event with information and interaction options.
+ * The card displays the event's image, category, date, location, and time. It also offers
+ * links for users to join the event or view more details.
+ * 
+ * @param {{ card: { id: string, src: string, field: string, date: string, title: string, location: string, time: string }}} props - The properties passed to the component.
+ * @param {Object} props.card - The event data to be displayed in the card.
+ * 
+ * @returns {React.ReactElement} The event summary card component.
+ */
+function EventCard({ card }) {
 
   const href = `/event/${card.id}`
   return (
@@ -45,3 +55,5 @@ export default function EventCard({ card }) {
     </a>
   );
 }
+
+export default EventCard

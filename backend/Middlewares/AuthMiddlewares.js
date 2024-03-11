@@ -2,6 +2,15 @@ const VolunteerUser = require("../Models/VolunteerUserModel");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
+/**
+ * Middleware for verifying the volunteer's JWT token.
+ * This function checks for the presence of a token in cookies and verifies it.
+ * If verification is successful and the user is found in the database, it responds with the user's username.
+ * Otherwise, it returns a status indicating the failure of the token verification.
+ *
+ * @param {Object} req - The request object from Express, containing cookies with JWT token.
+ * @param {Object} res - The response object from Express, used to return the verification status and user information.
+ */
 module.exports.volunteerVerification = (req, res) => {
   const token = req.cookies.token
   if (!token) {
