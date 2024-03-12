@@ -10,7 +10,7 @@ export default function LogisticsPage() {
     <>
       <div className="items events eventpage">
         {/* <p>Ready to help them</p> */}
-        <h1 className="header">Logistics Support for Upcomging Events</h1>
+        <h1 className="header">Logistics Support for Upcoming Events</h1>
 
         <div className="eventGrid">
           {logistics.map((card) => (
