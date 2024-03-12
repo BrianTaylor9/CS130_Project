@@ -73,10 +73,10 @@ function Item({ card, displayBtn  }) {
             </div>
 
             <p className="start">
-              ₹{card.collected} <span> Raised</span>
+              ${card.collected} <span> Raised</span>
             </p>
             <p className="end">
-              ₹{card.goal} <span> Goal</span>
+              ${card.goal} <span> Goal</span>
             </p>
           </div>
           {displayBtn && (
